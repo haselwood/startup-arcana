@@ -33,17 +33,18 @@ export function Lightbox({ card, onClose }: LightboxProps) {
       <div className="absolute inset-0 bg-void/90 backdrop-blur-sm" />
 
       <div
-        className="relative z-10 flex flex-col w-full h-full sm:w-auto sm:h-auto max-h-full sm:max-h-[90vh] overflow-y-auto border-0 sm:border border-sigil/30 bg-obsidian sm:bg-obsidian/60 backdrop-blur-md"
+        className="relative z-10 flex flex-col w-full h-full sm:w-auto sm:h-auto sm:max-w-[900px] max-h-full sm:max-h-[90vh] overflow-y-auto border-0 sm:border border-sigil/30 bg-obsidian sm:bg-obsidian/60 backdrop-blur-md"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button — top right */}
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center bg-white/10 border border-white/20 text-white/70 hover:text-white hover:bg-white/20 transition-colors text-[16px]"
+          className="absolute top-4 right-4 z-20 flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 text-white/70 hover:text-white hover:bg-white/20 transition-colors"
           aria-label="Close"
         >
-          &times;
+          <span className="text-[12px] font-mono tracking-wider">close</span>
+          <span className="text-[16px]">&times;</span>
         </button>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-10 p-4 sm:p-10">
@@ -67,17 +68,17 @@ export function Lightbox({ card, onClose }: LightboxProps) {
 
             {meaning && (
               <div className="mt-5">
-                <p className="text-[14px] leading-relaxed text-phantom/85 tracking-wide mb-4">
+                <p className="text-[14px] font-mono font-light leading-relaxed text-phantom/85 tracking-wide mb-4">
                   {meaning.description}
                 </p>
                 <div className="space-y-3">
                   <div>
                     <span className="px-2.5 py-1 text-[11px] font-mono uppercase tracking-wider bg-white/10 border border-white/20 text-white">Light</span>
-                    <p className="mt-2 text-[14px] font-sans text-phantom/80 tracking-wide">{meaning.light.join(', ')}</p>
+                    <p className="mt-2 text-[14px] font-mono font-light text-phantom/80 tracking-wide">{meaning.light.join(', ')}</p>
                   </div>
                   <div>
                     <span className="px-2.5 py-1 text-[11px] font-mono uppercase tracking-wider bg-white/10 border border-white/20 text-white">Dark</span>
-                    <p className="mt-2 text-[14px] font-sans text-phantom/80 tracking-wide">{meaning.dark.join(', ')}</p>
+                    <p className="mt-2 text-[14px] font-mono font-light text-phantom/80 tracking-wide">{meaning.dark.join(', ')}</p>
                   </div>
                 </div>
               </div>
