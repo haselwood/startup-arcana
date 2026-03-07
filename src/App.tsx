@@ -210,7 +210,7 @@ function SpreadPage() {
                 {SPREAD_CONFIGS[spreadType].label}
               </p>
               <span className="text-oracle/50 text-[10px]">&#x2726;</span>
-              <p className="text-[13px] sm:text-[14px] font-mono text-whisper/70">
+              <p className="text-[15px] sm:text-[16px] font-mono text-white">
                 {SPREAD_CONFIGS[spreadType].description}
               </p>
             </div>
@@ -218,9 +218,9 @@ function SpreadPage() {
               <textarea
                 value={question}
                 onChange={e => setQuestion(e.target.value)}
-                placeholder="What is your question for the universe?"
+                placeholder="What would you like to examine with the Oracle? Choose an area of your life (career progression, life goals) or ask a specific question."
                 rows={3}
-                className="w-full px-4 py-3 border border-sigil/50 bg-obsidian/40 text-white text-[14px] sm:text-[15px] font-mono placeholder:text-whisper/40 focus:outline-none focus:border-whisper/40 transition-colors text-center resize-none"
+                className="w-full px-4 py-3 border border-whisper/40 bg-obsidian/70 text-white text-[16px] sm:text-[15px] font-mono placeholder:text-whisper/50 focus:outline-none focus:border-whisper/60 focus:bg-obsidian/90 transition-colors text-center resize-none"
               />
               <div className="flex justify-center">
                 <ActionButton onClick={handleQuestionSubmit}>
@@ -228,13 +228,11 @@ function SpreadPage() {
                 </ActionButton>
               </div>
             </div>
-            <button
-              type="button"
-              onClick={() => navigate('/')}
-              className="mt-8 text-[12px] font-mono text-whisper/50 tracking-wider uppercase hover:text-whisper/80 transition-colors"
-            >
-              &larr; Back
-            </button>
+            <div className="mt-8">
+              <ActionButton onClick={() => navigate('/')}>
+                &larr; Back
+              </ActionButton>
+            </div>
           </div>
         )}
 
@@ -298,7 +296,7 @@ function SpreadPage() {
                 )}
                 {readingText && (
                   <div className="p-5 sm:p-8">
-                    <p className="text-[12px] sm:text-[11px] font-mono font-extralight text-white leading-relaxed tracking-wide whitespace-pre-wrap">
+                    <p className="text-[12px] font-mono font-extralight text-white leading-relaxed tracking-wide whitespace-pre-wrap">
                       {readingText}
                     </p>
                     {isLoadingReading && (
