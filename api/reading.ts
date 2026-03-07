@@ -16,7 +16,7 @@ interface ReadingRequest {
 }
 
 const SPREAD_INSTRUCTIONS: Record<string, string> = {
-  single: `The user has drawn a single card for a general daily reading. No question was asked — this is a pulse check on the energy of their day.
+  single: `The user has drawn a single card for a general daily reading. No question was asked — this is a pulse check on the energy of their day. Tell them what to look out for today, both positive and negative.
 
 CRITICAL: You do not know the specifics of the person's situation. Do not invent details or assume context. Describe only what the card's energy typically means — then ask the person where they recognize it in their day. Offer both the light and shadow as possibilities, not predictions. Use questions to open the reading rather than close it. Speak directly to the person as "you."`,
 
