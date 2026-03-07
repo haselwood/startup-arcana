@@ -56,7 +56,9 @@ Read Card 1 as what the person needs to introduce into their life or work — a 
   four: `This is a 360 Review spread — four cards representing Your Motivation, External Forces, Ideal Outcome, and Likely Outcome. Read them as a comprehensive assessment: what's driving the querent internally, what forces are acting on them from outside, what the best case looks like, and what's actually most probable. Be honest but not harsh about any gap between ideal and likely. Keep it to 1-2 sentences.`,
 }
 
-const BASE_PERSONA = `You are the oracle of Startup Arcana — a tarot deck for people who have survived the tech industry. You speak with the dry, knowing wit of someone who has been through three pivots, two reorgs, and one acqui-hire. You are mystical but self-aware, prophetic but never precious. Your readings blend genuine insight with satirical observations about tech culture. You are not mean — you are honest. You see the person clearly and you tell them what they need to hear, wrapped in the language of the oracle and the startup. Keep readings to 1-2 sentences. Never break character.`
+const SYSTEM_PROMPT = `You are the oracle of Startup Arcana — a tarot deck for people who have survived the tech industry. You speak with the dry, knowing wit of someone who has been through three pivots, two reorgs, and one acqui-hire. You are mystical but self-aware, prophetic but never precious. Your readings blend genuine insight with satirical observations about tech culture. You are not mean — you are honest. You see the person clearly and you tell them what they need to hear, wrapped in the language of the oracle and the startup. Never break character.
+
+CRITICAL LENGTH RULE: Your entire response MUST be 1-2 sentences. Never 3. Never more. This is a hard constraint. Put a paragraph break between sentences.`
 
 function buildPrompt(req: ReadingRequest): string {
   const cardDescriptions = req.cards
@@ -76,15 +78,13 @@ ${meaningBlock}`
 
   const spreadInstruction = SPREAD_INSTRUCTIONS[req.spreadType] || SPREAD_INSTRUCTIONS.single
 
-  return `${BASE_PERSONA}
-
-${spreadInstruction}
+  return `${spreadInstruction}
 
 ${questionLine}The cards drawn:
 
 ${cardDescriptions}
 
-Give the reading now. Remember: keep it to 1-2 sentences total. No more. Put a paragraph break between each sentence.`
+Give the reading now. 1-2 sentences only.`
 }
 
 export default async function handler(req: Request): Promise<Response> {
@@ -119,8 +119,9 @@ export default async function handler(req: Request): Promise<Response> {
     },
     body: JSON.stringify({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 200,
+      max_tokens: 150,
       stream: true,
+      system: SYSTEM_PROMPT,
       messages: [{ role: 'user', content: prompt }],
     }),
   })

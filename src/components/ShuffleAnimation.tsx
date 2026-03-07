@@ -73,8 +73,8 @@ export function ShuffleAnimation({ onComplete }: ShuffleAnimationProps) {
 
   return (
     <div className="flex flex-col items-center justify-center gap-8 min-h-[40vh]">
-      <p className="text-[13px] text-oracle/60 tracking-[0.25em] uppercase loading-pulse font-mono">
-        Shuffling the deck
+      <p className="text-[22px] sm:text-[28px] tracking-[0.08em] font-serif text-white oracle-glow-text title-glow">
+        Shuffling the Deck
       </p>
       <div className="relative w-[180px] h-[300px] sm:w-[234px] sm:h-[390px]" style={{ marginBottom: `${LAYERS}px`, marginRight: `${LAYERS}px` }}>
         {Array.from({ length: LAYERS }).map((_, i) => {
