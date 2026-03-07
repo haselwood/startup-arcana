@@ -38,10 +38,10 @@ const SUIT_HEX: Record<Suit, string> = {
 }
 
 const SUITS: { key: Suit; label: string; description: string; cards: TarotCard[] }[] = [
-  { key: 'ARCHETYPE', label: 'Archetypes', description: 'These 16 characters represent the people you meet up and down the ladder of your career. Each figure has a light and dark side that can either help you or cause you to wish you\'d gone into the trades.', cards: ARCHETYPE },
-  { key: 'MINDSET', label: 'Mindset', description: 'Mindset cards represent the mental states, attitudes, and inner narratives that shape how you show up at work. These cards remind you of the power that comes from your own thought process.', cards: MINDSET },
-  { key: 'ARTIFACTS', label: 'Artifacts', description: 'Artifact cards represent the tangible tools, documents, deliverables you face in your day to day. Each artifact holds power over your fate as they can be executed to perfection or the subject of your late night ruminations.', cards: ARTIFACTS },
-  { key: 'VIBES', label: 'Vibes', description: 'Vibe cards represent the intangible energies, cultural currents, and cosmic moods that permeate the typical startup culture. They are the things you feel but can never put on a slide.', cards: VIBES },
+  { key: 'ARCHETYPE', label: 'Archetypes', description: 'The archetypes you meet. These 16 figures represent the recurring cast of characters you meet up and down the ladder of your career. An archetype card asks you to consider who is showing up in your current situation, or which archetype you yourself might be embodying right now.', cards: ARCHETYPE },
+  { key: 'MINDSET', label: 'Mindset', description: 'The frameworks you live by. Mindset cards represent the cognitive frameworks that shape how people think and operate in tech culture. Drawing a Mindset card asks you to examine the thinking behind your current situation. What framework is governing your decisions? Is it serving you?', cards: MINDSET },
+  { key: 'ARTIFACTS', label: 'Artifacts', description: 'The relics you leave behind. Artifact cards represent the tangible tools, documents, rituals, and deliverables you interface with daily. Drawing an Artifacts card asks you to look at what is being made, what is being signed, the ritual being performed, and what it really means.', cards: ARTIFACTS },
+  { key: 'VIBES', label: 'Vibes', description: 'Vibe cards represent the intangible energies, emotions, and human moments that no roadmap ever captures. These cards often point to introspective moments; drawing a Vibes card asks you to name what you are actually feeling beneath the professional surface.', cards: VIBES },
 ]
 
 

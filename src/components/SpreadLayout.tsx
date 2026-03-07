@@ -1,4 +1,5 @@
 import { TarotCard } from './TarotCard'
+import { cn } from '@/lib/utils'
 import { SPREAD_CONFIGS } from '@/data/cards'
 import type { DealtCard, SpreadType } from '@/types'
 

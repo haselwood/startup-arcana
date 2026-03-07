@@ -51,7 +51,7 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "The rare soul who actually reads your PR comments, buys you coffee when you're struggling, and tells you the truth about the promotion timeline. They've seen four rounds of layoffs and still believe people are worth investing in. Cherish them.",
   },
 
-  'archetype-2nd-employee': {
+  'archetype-the-og': {
     light: ['Institutional Knowledge', 'Resilience', 'Founder Energy', 'Credibility'],
     dark: ['Entitlement', 'Resistance to Change', 'Nostalgia Trap', 'Diluted Equity'],
     description: "They joined before there were desks. They remember when the 'database' was a Google Sheet and the 'office' was a Panera Bread. They own 0.3% of the company and will never let you forget it, even though the last two funding rounds diluted it into a rounding error.",
@@ -109,8 +109,8 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
   // MINDSET
   // ══════════════════════════════════════
 
-  'mindset-cultural-fit': {
-    light: ['Buy-In', 'Alignment', 'Commitment', 'Belonging'],
+  'mindset-alignment': {
+    light: ['Buy-In', 'Commitment', 'Belonging', 'Shared Direction'],
     dark: ['Brainwashing', 'Blind Faith', 'Loss of Self', 'Cult Vibes'],
     description: "You've started using the company values in casual conversation unironically. You said 'we're a family here' at dinner with your actual family. The brainwashing is complete. The equity vesting schedule has you in a chokehold.",
   },
@@ -145,16 +145,10 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "Day one at a new job: 47 tabs open, three Notion docs that contradict each other, a Slack channel called #random that is somehow mission-critical, and someone casually mentions 'the incident' without elaborating. You are learning. You are drowning. Same thing.",
   },
 
-  'mindset-imposter-syndrome': {
-    light: ['Humility', 'Self-Awareness', 'Drive to Prove', 'Empathy'],
-    dark: ['Self-Doubt', 'Paralysis', 'Undervaluing Yourself', 'Anxiety'],
-    description: "You are absolutely certain that everyone around you is smarter, more qualified, and will eventually discover you've been Googling basic syntax for years. Plot twist: they're all Googling it too. The entire industry is imposters all the way down.",
-  },
-
-  'mindset-zoom-out': {
-    light: ['Perspective', 'Strategic Thinking', 'Context', 'Clarity'],
-    dark: ['Avoidance', 'Hand-Waving', 'Losing the Details', 'Platitudes'],
-    description: "Someone in leadership wants you to stop caring about the bug you've been debugging for three days and instead 'think about the bigger picture.' The bigger picture is that this company has no idea what it's doing, but at a higher altitude.",
+  'mindset-deep-work': {
+    light: ['Focus', 'Flow State', 'Productivity', 'Mastery'],
+    dark: ['Interruption Magnet', 'Unreachable', 'Tunnel Vision', 'False Sanctuary'],
+    description: "The sacred state of actually doing work, interrupted every eleven minutes by a Slack notification, a 'quick sync,' and someone asking if you saw the message they sent two minutes ago. You put on headphones. They tap your shoulder.",
   },
 
   'mindset-boil-the-ocean': {
@@ -193,10 +187,16 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "You've decided this is the issue where you make your stand — the button color, the API naming convention, the Oxford comma in the docs. You know it doesn't matter. They know it doesn't matter. But you will not yield.",
   },
 
-  'mindset-view-only': {
+  'mindset-vanity-metrics': {
     light: ['Awareness', 'Observation', 'Access to Information', 'Transparency'],
     dark: ['Powerlessness', 'Exclusion', 'Spectator Mode', 'Voicelessness'],
-    description: "You've been given access to the document but not the power to change anything. A perfect metaphor for your role in this organization. You can see the spreadsheet. You can see the decisions being made. You cannot touch them.",
+    description: "The metrics that look great in the board deck and mean nothing in the real world. DAU is up because of a bug. Engagement is 'strong' because you're counting bot traffic. The vanity is the point. Nobody wants the real numbers.",
+  },
+
+  'mindset-clarity': {
+    light: ['Focus', 'Direction', 'Simplicity', 'Decisiveness'],
+    dark: ['Overthinking', 'Paralysis', 'False Precision', 'Analysis Trap'],
+    description: "The thing everyone says they want and nobody actually achieves. You've had seven meetings to 'get alignment' and you're less clear than when you started. Clarity is a luxury. Most days you're just choosing which ambiguity to live with.",
   },
 
   'mindset-disagree-and-commit': {
@@ -219,18 +219,6 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     light: ['Vision', 'Storytelling', 'Ambition', 'Persuasion'],
     dark: ['Delusion', 'Vanity Metrics', 'Fantasy TAM', 'Style Over Substance'],
     description: "Twelve slides of delusion rendered in Figma with a font that costs $400/year. The TAM slide claims a $50 billion market. The team slide has headshots with identical crossed-arm poses. Slide 7 is just the word 'WHY' in 200pt font.",
-  },
-
-  'artifacts-north-star': {
-    light: ['Focus', 'Shared Direction', 'Measurability', 'Purpose'],
-    dark: ['Moving Target', 'Weaponized Metric', 'Misalignment', 'North-ish'],
-    description: "The metric that's supposed to guide all decisions but actually just gets invoked when someone needs to win an argument. It changes every two quarters. It's north-ish. The star is more of a general direction. Nobody has a compass.",
-  },
-
-  'artifacts-series-a': {
-    light: ['Validation', 'Runway', 'Growth Capital', 'Credibility'],
-    dark: ['Burn Rate', 'Strings Attached', 'Premature Scaling', 'Board Seats'],
-    description: "The money that turns a scrappy idea into a slightly less scrappy idea with a WeWork membership and a head of people ops. The burn rate is 'intentional.' The runway is 18 months if you squint. The board wants to talk about unit economics.",
   },
 
   'artifacts-nda': {
@@ -257,12 +245,6 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "A work of speculative fiction presented as a Gantt chart. Q1 is detailed. Q2 is optimistic. Q3 is a single bar labeled 'scale.' The roadmap will be obsolete by the time you finish presenting it, but it looks great in the board deck.",
   },
 
-  'artifacts-vibe-coding': {
-    light: ['Flow State', 'Intuition', 'Speed', 'AI-Augmented'],
-    dark: ['No Understanding', 'Fragile Code', 'Cargo Culting', 'Vibes Over Rigor'],
-    description: "You stopped reading the docs and started asking the AI to just write it. The code works. You don't know why. The tests pass. You don't know why. The PR got approved because nobody else knows why either. This is the future.",
-  },
-
   'artifacts-the-backlog': {
     light: ['Captured Ideas', 'Organizational Memory', 'Prioritization Queue', 'Potential'],
     dark: ['Graveyard', 'Guilt', 'Infinite Scroll', 'Grooming Theater'],
@@ -273,6 +255,12 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     light: ['Accountability', 'User Advocacy', 'Quality Signal', 'Tracking'],
     dark: ['Vague Reports', 'Blame Shifting', 'Priority Inflation', 'Blurry Screenshots'],
     description: "Steps to reproduce: 'it just broke.' Priority: P1 (it is not P1). Assigned to: whoever was unlucky enough to be online. Attached: a screenshot of a screenshot, slightly blurry, taken on a phone, of a different phone.",
+  },
+
+  'artifacts-pull-request': {
+    light: ['Collaboration', 'Code Review', 'Documentation', 'Quality Gate'],
+    dark: ['Endless Nitpicks', 'Bikeshedding', 'Merge Conflicts', 'Abandoned PRs'],
+    description: "A 400-line diff with a description that says 'fix stuff.' Three reviewers have left comments about variable naming. The CI is red. It's been open for two weeks. Someone will close it and open a new one with the same changes.",
   },
 
   'artifacts-slack-message': {
@@ -299,6 +287,18 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "'Worst app ever. Doesn't even work.' Posted by someone running iOS 12 on a phone from 2016 who didn't read the onboarding. It will live rent-free in the founder's head for six months. The five-star reviews are invisible.",
   },
 
+  'artifacts-retro': {
+    light: ['Reflection', 'Continuous Improvement', 'Team Voice', 'Closure'],
+    dark: ['Ritual Theater', 'Same Action Items', 'Archived Miro Boards', 'Groundhog Day'],
+    description: "What went well: nothing meaningful. What could improve: everything. Action items: the same three from last sprint that nobody did. Someone will say 'communication' and everyone will nod. The Miro board will be archived and never opened again.",
+  },
+
+  'artifacts-offsite': {
+    light: ['Bonding', 'Vision Setting', 'Break from Routine', 'Alignment'],
+    dark: ['Forced Fun', 'Performative Vulnerability', 'Expense Reports', 'Monday Amnesia'],
+    description: "Two days at a boutique hotel where the team will 'align on vision' over overpriced wine and a ropes course nobody wanted. You'll share vulnerable truths during the trust exercise and pretend it never happened on Monday. The Uber receipt is $340.",
+  },
+
   'artifacts-ai-slop': {
     light: ['Scale', 'Efficiency', 'SEO', 'Output Volume'],
     dark: ['Soullessness', 'Quality Collapse', 'Content Pollution', 'No One Home'],
@@ -315,16 +315,28 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "New laptop smell, fresh Slack install, zero unread messages. Your calendar is empty. Your hope is full. You genuinely believe the onboarding doc when it says 'we move fast and break things.' You don't yet know that the thing they'll break is you.",
   },
 
-  'vibes-offsite': {
-    light: ['Bonding', 'Vision Setting', 'Break from Routine', 'Alignment'],
-    dark: ['Forced Fun', 'Performative Vulnerability', 'Expense Reports', 'Monday Amnesia'],
-    description: "Two days at a boutique hotel where the team will 'align on vision' over overpriced wine and a ropes course nobody wanted. You'll share vulnerable truths during the trust exercise and pretend it never happened on Monday. The Uber receipt is $340.",
+  'vibes-blue-sky': {
+    light: ['Possibility', 'Ideation', 'No Constraints', 'Creative Freedom'],
+    dark: ['Unmoored', 'Scope Creep', 'Endless Brainstorming', 'Nothing Ships'],
+    description: "The meeting where anything is possible and nothing is decided. Whiteboards fill with ideas that will never see production. It's energizing and useless in equal measure. Someone will say 'no bad ideas' and you will have several.",
   },
 
-  'vibes-out-of-office': {
-    light: ['Rest', 'Boundaries', 'Recharging', 'Perspective'],
-    dark: ['Fake Disconnection', 'Guilt', 'Slack Checking', 'Phantom Notifications'],
-    description: "The autoresponder is on. The laptop is 'technically' in the suitcase. You will check Slack exactly once, which will become four times, which will become a 45-minute thread about a deploy that shouldn't have happened. Vacation is a state of mind you cannot access.",
+  'vibes-the-collab': {
+    light: ['Synergy', 'Cross-Pollination', 'Shared Ownership', 'Momentum'],
+    dark: ['Too Many Cooks', 'Meeting Creep', 'Diffused Accountability', 'Slack Thread Hell'],
+    description: "A 'quick sync' that becomes a recurring series. Six people in a room, three time zones on Zoom, and a doc that everyone can edit and nobody owns. The collab is real. The output is a spreadsheet with 47 tabs.",
+  },
+
+  'vibes-flow-state': {
+    light: ['Productivity', 'Presence', 'Mastery', 'Timelessness'],
+    dark: ['Interruption Trauma', 'Context Switch Cost', 'Rare and Fragile', 'Slack Pings'],
+    description: "That elusive two hours where the code wrote itself and you forgot to eat. You emerged from the cave a different person. It happens four times a year. The next meeting is in seven minutes. The flow is already a memory.",
+  },
+
+  'vibes-imposter-syndrome': {
+    light: ['Humility', 'Self-Awareness', 'Drive to Prove', 'Empathy'],
+    dark: ['Self-Doubt', 'Paralysis', 'Undervaluing Yourself', 'Anxiety'],
+    description: "You are absolutely certain that everyone around you is smarter, more qualified, and will eventually discover you've been Googling basic syntax for years. Plot twist: they're all Googling it too. The entire industry is imposters all the way down.",
   },
 
   'vibes-sunday-scaries': {
@@ -333,28 +345,16 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "It's 6pm on Sunday and your chest is tight. Tomorrow's standup requires you to explain what you did last week, which was mostly attend meetings about what you'd do this week. The dread is productivity's shadow. It always arrives on time.",
   },
 
-  'vibes-retro': {
-    light: ['Reflection', 'Continuous Improvement', 'Team Voice', 'Closure'],
-    dark: ['Ritual Theater', 'Same Action Items', 'Archived Miro Boards', 'Groundhog Day'],
-    description: "What went well: nothing meaningful. What could improve: everything. Action items: the same three from last sprint that nobody did. Someone will say 'communication' and everyone will nod. The Miro board will be archived and never opened again.",
+  'vibes-out-of-office': {
+    light: ['Rest', 'Boundaries', 'Recharging', 'Perspective'],
+    dark: ['Fake Disconnection', 'Guilt', 'Slack Checking', 'Phantom Notifications'],
+    description: "The autoresponder is on. The laptop is 'technically' in the suitcase. You will check Slack exactly once, which will become four times, which will become a 45-minute thread about a deploy that shouldn't have happened. Vacation is a state of mind you cannot access.",
   },
 
-  'vibes-heads-down': {
-    light: ['Deep Work', 'Focus', 'Flow State', 'Productivity'],
-    dark: ['Interruption Magnet', 'Unreachable', 'Shoulder Taps', 'False Sanctuary'],
-    description: "The sacred state of actually doing work, interrupted every eleven minutes by a Slack notification, a 'quick sync,' and someone asking if you saw the message they sent two minutes ago. You put on headphones. They tap your shoulder.",
-  },
-
-  'vibes-launch-day': {
-    light: ['Excitement', 'Culmination', 'Adrenaline', 'Shipping'],
-    dark: ['First Bug in 43 Minutes', 'Premature Champagne', 'Dashboard Watching', 'Fragile Victory'],
-    description: "The adrenaline is real. The Datadog dashboard is open on every screen. Someone brought champagne they'll drink whether it goes well or not. The deploy is green. The tweets are scheduled. The first bug report arrives in forty-three minutes.",
-  },
-
-  'vibes-fire-drill': {
-    light: ['Urgency', 'Team Mobilization', 'Problem Solving', 'Adrenaline'],
-    dark: ['Chaos', 'No Documentation', 'Sleep Deprivation', 'Euphemisms for Panic'],
-    description: "Everything is on fire but nobody will say 'fire' — they say 'urgent' and 'time-sensitive' and 'let's swarm on this.' The Slack channel is called #incident-response but the real incident is that nobody documented anything. Coffee is mandatory. Sleep is optional.",
+  'vibes-craft': {
+    light: ['Mastery', 'Pride', 'Attention to Detail', 'Excellence'],
+    dark: ['Perfectionism', 'Over-Engineering', 'Sunk Cost', 'Nobody Notices'],
+    description: "You spent three days on the animation. The padding is pixel-perfect. The code is elegant. Nobody will notice. The PM will ask for a different color. The craft is for you. The craft is always for you.",
   },
 
   'vibes-the-pivot': {
@@ -387,7 +387,7 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     description: "The calendar invite says 'Quick Chat' and it's from someone in HR you've never met. It's fifteen minutes long. Your badge will stop working by lunch. The all-hands that follows will use the phrase 'difficult decision' exactly seven times.",
   },
 
-  'vibes-ipo': {
+  'vibes-the-liquidity-event': {
     light: ['Culmination', 'Liquidity', 'Validation', 'Celebration'],
     dark: ['Disappointment', 'Dilution Math', 'Used Honda Money', 'Lock-Up Period'],
     description: "The bell rings. The stock price does a thing. LinkedIn posts with champagne emojis multiply like bacteria. The early employees do math on napkins. The rest of you check your vested shares and realize you can almost afford a used Honda. Congratulations.",
