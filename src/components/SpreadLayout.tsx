@@ -45,8 +45,12 @@ export function SpreadLayout({ cards, spreadType, onFlip, onLightbox, placeholde
     )
   }
 
+  const isThreeCard = config.count === 3
   return (
-    <div className="flex flex-wrap justify-center gap-3 sm:gap-8">
+    <div className={cn(
+      'flex flex-wrap justify-center',
+      isThreeCard ? 'gap-0 sm:gap-8' : 'gap-3 sm:gap-8'
+    )}>
       {cards.map((dealt, i) => (
         <TarotCard
           key={dealt.card.id}
