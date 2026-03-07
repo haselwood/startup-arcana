@@ -282,11 +282,13 @@ function SpreadPage() {
               />
             </div>
 
-            {question && (
-              <p className="text-[14px] sm:text-[15px] font-mono text-white normal-case max-w-sm text-center mt-4">
-                &ldquo;{question}&rdquo;
-              </p>
-            )}
+            {question ? (
+              <div className="w-full flex justify-center mt-8 mb-2 px-4">
+                <p className="text-[14px] sm:text-[15px] font-mono text-white normal-case max-w-sm text-center">
+                  &ldquo;{question}&rdquo;
+                </p>
+              </div>
+            ) : null}
 
             {phase === 'reading' && (
               <div ref={readingRef} className="w-full max-w-lg mt-7 sm:mt-11 mb-12">
