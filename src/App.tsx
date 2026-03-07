@@ -216,7 +216,7 @@ function SpreadPage() {
                 {SPREAD_CONFIGS[spreadType].label}
               </p>
               <span className="text-oracle/50 text-[10px]">&#x2726;</span>
-              <p className="text-[15px] sm:text-[16px] font-mono text-white">
+              <p className="text-[15px] sm:text-[16px] font-mono font-semibold text-white tracking-wide">
                 {SPREAD_CONFIGS[spreadType].description}
               </p>
             </div>
@@ -269,11 +269,6 @@ function SpreadPage() {
                 <h2 className="title-glow font-serif text-[28px] sm:text-[38px] font-bold text-white tracking-[0.015em]">
                   {SPREAD_CONFIGS[spreadType].label}
                 </h2>
-                {question && (
-                  <p className="text-[14px] sm:text-[15px] font-mono text-white normal-case max-w-sm">
-                    &ldquo;{question}&rdquo;
-                  </p>
-                )}
               </div>
             </div>
 
@@ -286,6 +281,12 @@ function SpreadPage() {
                 deckRef={deckRef}
               />
             </div>
+
+            {question && (
+              <p className="text-[14px] sm:text-[15px] font-mono text-white normal-case max-w-sm text-center mt-4">
+                &ldquo;{question}&rdquo;
+              </p>
+            )}
 
             {phase === 'reading' && (
               <div ref={readingRef} className="w-full max-w-lg mt-7 sm:mt-11 mb-12">
