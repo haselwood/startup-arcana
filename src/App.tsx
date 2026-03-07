@@ -210,7 +210,7 @@ function SpreadPage() {
       <div className="relative z-10 flex flex-col items-center px-4 py-4 sm:py-12 min-h-screen">
 
         {phase === 'question' && (
-          <div className="flex flex-col items-center justify-center min-h-[70vh] w-full max-w-md px-4">
+          <div className="flex flex-col items-center justify-center min-h-[70vh] w-full max-w-md">
             <div className="flex flex-col items-center text-center gap-2 mb-8">
               <p className="text-[20px] sm:text-[26px] font-serif text-white tracking-wide">
                 {SPREAD_CONFIGS[spreadType].label}
