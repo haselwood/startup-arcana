@@ -6,13 +6,13 @@ import type { DealtCard } from '@/types'
 const MOBILE_CARD_SIZES: Record<number, string> = {
   1: 'w-[200px] h-[333px]',
   2: 'w-[155px] h-[258px]',
-  3: 'w-[105px] h-[175px]',
+  3: 'w-[130px] h-[217px]',
 }
 
 const MOBILE_LABEL_SIZES: Record<number, string> = {
   1: 'max-w-[200px]',
   2: 'max-w-[155px]',
-  3: 'max-w-[105px]',
+  3: 'max-w-[130px]',
 }
 
 interface TarotCardProps {
@@ -58,8 +58,9 @@ export function TarotCard({ dealt, onFlip, onLightbox, index, deckRef, totalCard
     }
   }
 
+  const overlapClass = totalCards === 3 && index > 0 ? 'ml-[-26px] sm:ml-0' : ''
   return (
-    <div className="relative flex flex-col items-center gap-3 sm:gap-4" style={{ zIndex: 50 - index }}>
+    <div className={cn('relative flex flex-col items-center gap-3 sm:gap-4', overlapClass)} style={{ zIndex: 50 - index }}>
       <button
         ref={cardRef}
         type="button"

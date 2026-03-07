@@ -270,7 +270,7 @@ function SpreadPage() {
                   {SPREAD_CONFIGS[spreadType].label}
                 </h2>
                 {question && (
-                  <p className="text-[12px] sm:text-[13px] font-mono text-whisper/50 italic normal-case max-w-sm">
+                  <p className="text-[14px] sm:text-[15px] font-mono text-white normal-case max-w-sm">
                     &ldquo;{question}&rdquo;
                   </p>
                 )}
