@@ -72,7 +72,7 @@ export function ShuffleAnimation({ onComplete }: ShuffleAnimationProps) {
   }, [onComplete])
 
   return (
-    <div className="flex flex-col items-center justify-center gap-8 min-h-[40vh]">
+    <div className="flex flex-col items-center justify-center gap-6 sm:gap-8">
       <p className="text-[22px] sm:text-[28px] tracking-[0.08em] font-serif text-white oracle-glow-text title-glow">
         Shuffling the Deck
       </p>

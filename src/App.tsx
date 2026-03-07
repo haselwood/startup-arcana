@@ -216,7 +216,7 @@ function SpreadPage() {
             </div>
             <div className="w-full space-y-5">
               <div className="space-y-3">
-                <p className="text-[13px] sm:text-[14px] font-mono text-whisper/70 text-center leading-relaxed">
+                <p className="text-[15px] sm:text-[14px] font-mono text-white text-left sm:text-center leading-relaxed">
                   What would you like to examine with the Oracle? Choose an area of your life (career progression, life goals) or ask a specific question.
                 </p>
                 <textarea
@@ -242,7 +242,7 @@ function SpreadPage() {
         )}
 
         {phase === 'shuffling' && (
-          <div className="flex-1 flex items-center justify-center w-full">
+          <div className="flex items-start sm:items-center justify-center w-full min-h-[80vh] pt-[10vh] sm:pt-0">
             <ShuffleAnimation onComplete={handleShuffleComplete} />
           </div>
         )}
