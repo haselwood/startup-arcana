@@ -184,6 +184,12 @@ function SpreadPage() {
   }, [question, spreadType, startTypewriter])
 
   useEffect(() => {
+    if (phase === 'dealt' || phase === 'reading') {
+      window.scrollTo(0, 0)
+    }
+  }, [phase])
+
+  useEffect(() => {
     if (phase !== 'dealt' || hasTriggeredReading.current) return
     const allFlipped = dealtCards.length > 0 && dealtCards.every(d => d.isFlipped)
     if (allFlipped) {
