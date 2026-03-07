@@ -215,13 +215,18 @@ function SpreadPage() {
               </p>
             </div>
             <div className="w-full space-y-5">
-              <textarea
-                value={question}
-                onChange={e => setQuestion(e.target.value)}
-                placeholder="What would you like to examine with the Oracle? Choose an area of your life (career progression, life goals) or ask a specific question."
-                rows={3}
-                className="w-full px-4 py-3 border border-whisper/40 bg-obsidian/70 text-white text-[16px] sm:text-[15px] font-mono placeholder:text-whisper/50 focus:outline-none focus:border-whisper/60 focus:bg-obsidian/90 transition-colors text-center resize-none"
-              />
+              <div className="space-y-3">
+                <p className="text-[13px] sm:text-[14px] font-mono text-whisper/70 text-center leading-relaxed">
+                  What would you like to examine with the Oracle? Choose an area of your life (career progression, life goals) or ask a specific question.
+                </p>
+                <textarea
+                  value={question}
+                  onChange={e => setQuestion(e.target.value)}
+                  placeholder="Tell me..."
+                  rows={3}
+                  className="w-full px-4 py-3 border border-whisper/40 bg-obsidian/70 text-white text-[16px] sm:text-[15px] font-mono placeholder:text-whisper/50 focus:outline-none focus:border-whisper/60 focus:bg-obsidian/90 transition-colors text-center resize-none"
+                />
+              </div>
               <div className="flex justify-center">
                 <ActionButton onClick={handleQuestionSubmit}>
                   Shuffle &amp; Deal
@@ -296,7 +301,7 @@ function SpreadPage() {
                 )}
                 {readingText && (
                   <div className="p-5 sm:p-8">
-                    <p className="text-[12px] font-mono font-extralight text-white leading-relaxed tracking-wide whitespace-pre-wrap">
+                    <p className="text-[14px] font-mono font-extralight text-white leading-relaxed tracking-wide whitespace-pre-wrap">
                       {readingText}
                     </p>
                     {isLoadingReading && (
