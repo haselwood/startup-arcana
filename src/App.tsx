@@ -298,7 +298,7 @@ function SpreadPage() {
                 )}
                 {readingText && (
                   <div className="p-5 sm:p-8">
-                    <p className="text-[10px] sm:text-[11px] font-mono font-extralight text-white leading-relaxed tracking-wide whitespace-pre-wrap">
+                    <p className="text-[12px] sm:text-[11px] font-mono font-extralight text-white leading-relaxed tracking-wide whitespace-pre-wrap">
                       {readingText}
                     </p>
                     {isLoadingReading && (
