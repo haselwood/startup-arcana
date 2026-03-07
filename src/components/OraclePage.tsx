@@ -32,7 +32,7 @@ export function OraclePage() {
           </div>
 
         </main>
-        <footer className="pt-8 sm:pt-10 pb-6 text-center w-full max-w-[528px] px-2 sm:px-0">
+        <footer className="pt-8 sm:pt-10 pb-6 text-center w-full max-w-[528px] px-4 sm:px-0">
           <div className="flex items-center justify-center gap-3">
             <Link
               to="/"

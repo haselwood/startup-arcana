@@ -89,7 +89,7 @@ export function SpreadSelector() {
   const configs = Object.values(SPREAD_CONFIGS).filter(c => !hiddenSpreads.has(c.type))
 
   return (
-    <div className="flex flex-col items-center gap-1 sm:gap-4 px-2 w-full">
+    <div className="flex flex-col items-center gap-1 sm:gap-4 px-4 w-full">
       <div className="text-center">
         <h1 className="title-glow font-serif text-[48px] sm:text-[63px] md:text-[76px] font-bold text-white tracking-[0.015em]">
           Startup Arcana
