@@ -59,7 +59,7 @@ export function TarotCard({ dealt, onFlip, onLightbox, index, deckRef, totalCard
   }
 
   return (
-    <div className="relative flex flex-col items-center gap-2 sm:gap-3" style={{ zIndex: 50 - index }}>
+    <div className="relative flex flex-col items-center gap-3 sm:gap-4" style={{ zIndex: 50 - index }}>
       <button
         ref={cardRef}
         type="button"
@@ -101,7 +101,7 @@ export function TarotCard({ dealt, onFlip, onLightbox, index, deckRef, totalCard
       </button>
 
       {/* Position label */}
-      <span className={cn('text-[13px] sm:text-[15px] font-mono text-white uppercase tracking-wider text-center sm:max-w-[234px]', MOBILE_LABEL_SIZES[totalCards] || MOBILE_LABEL_SIZES[3])}>
+      <span className={cn('text-[13px] sm:text-[15px] font-mono font-medium text-white uppercase tracking-wider text-center sm:max-w-[234px]', MOBILE_LABEL_SIZES[totalCards] || MOBILE_LABEL_SIZES[3])}>
         {position}
       </span>
     </div>

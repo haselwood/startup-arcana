@@ -261,7 +261,7 @@ function SpreadPage() {
                   {SPREAD_CONFIGS[spreadType].label}
                 </h2>
                 {question && (
-                  <p className="text-[12px] sm:text-[13px] font-mono text-whisper/50 italic max-w-sm">
+                  <p className="text-[12px] sm:text-[13px] font-mono text-whisper/50 italic normal-case max-w-sm">
                     &ldquo;{question}&rdquo;
                   </p>
                 )}
@@ -279,7 +279,7 @@ function SpreadPage() {
             </div>
 
             {phase === 'reading' && (
-              <div ref={readingRef} className="w-full max-w-lg mt-8 sm:mt-12 mb-12">
+              <div ref={readingRef} className="w-full max-w-lg mt-7 sm:mt-11 mb-12">
                 {isLoadingReading && !readingText && (
                   <div className="flex flex-col items-center gap-5">
                     <div className="smoke-infinity">
@@ -297,8 +297,8 @@ function SpreadPage() {
                   </div>
                 )}
                 {readingText && (
-                  <div className="border border-sigil/30 bg-obsidian/40 backdrop-blur-sm p-5 sm:p-8">
-                    <p className="text-[13px] sm:text-[14px] font-mono text-white leading-relaxed tracking-wide whitespace-pre-wrap">
+                  <div className="p-5 sm:p-8">
+                    <p className="text-[10px] sm:text-[11px] font-mono font-extralight text-white leading-relaxed tracking-wide whitespace-pre-wrap">
                       {readingText}
                     </p>
                     {isLoadingReading && (

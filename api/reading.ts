@@ -84,7 +84,7 @@ ${questionLine}The cards drawn:
 
 ${cardDescriptions}
 
-Give the reading now. Remember: keep it to 3-5 sentences total. No more.`
+Give the reading now. Remember: keep it to 3-5 sentences total. No more. Put a paragraph break between each sentence.`
 }
 
 export default async function handler(req: Request): Promise<Response> {
