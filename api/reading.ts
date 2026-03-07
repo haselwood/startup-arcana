@@ -84,7 +84,7 @@ ${questionLine}The cards drawn:
 
 ${cardDescriptions}
 
-Give the reading now.`
+Give the reading now. Remember: keep it to 3-5 sentences total. No more.`
 }
 
 export default async function handler(req: Request): Promise<Response> {
@@ -119,7 +119,7 @@ export default async function handler(req: Request): Promise<Response> {
     },
     body: JSON.stringify({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 1024,
+      max_tokens: 400,
       stream: true,
       messages: [{ role: 'user', content: prompt }],
     }),
