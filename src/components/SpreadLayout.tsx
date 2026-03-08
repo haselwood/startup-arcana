@@ -49,19 +49,27 @@ export function SpreadLayout({ cards, spreadType, onFlip, onLightbox, placeholde
   const isThreeCard = config.count === 3
   return (
     <div className={cn(
-      'flex flex-wrap justify-center',
-      isThreeCard ? 'gap-0 sm:gap-8' : 'gap-3 sm:gap-8'
+      isThreeCard
+        ? 'grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-8'
+        : 'flex flex-wrap justify-center gap-3 sm:gap-8',
+      'justify-items-center'
     )}>
       {cards.map((dealt, i) => (
-        <TarotCard
+        <div
           key={dealt.card.id}
-          dealt={dealt}
-          index={i}
-          onFlip={() => onFlip(i)}
-          onLightbox={() => onLightbox(i)}
-          deckRef={deckRef}
-          totalCards={config.count}
-        />
+          className={cn(
+            isThreeCard && i === 0 && 'col-span-2 sm:col-span-1'
+          )}
+        >
+          <TarotCard
+            dealt={dealt}
+            index={i}
+            onFlip={() => onFlip(i)}
+            onLightbox={() => onLightbox(i)}
+            deckRef={deckRef}
+            totalCards={config.count}
+          />
+        </div>
       ))}
     </div>
   )

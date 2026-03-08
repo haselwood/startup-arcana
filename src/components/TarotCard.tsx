@@ -58,9 +58,8 @@ export function TarotCard({ dealt, onFlip, onLightbox, index, deckRef, totalCard
     }
   }
 
-  const overlapClass = totalCards === 3 && index > 0 ? '-ml-8 sm:ml-0' : ''
   return (
-    <div className={cn('relative flex flex-col items-center gap-3 sm:gap-4', overlapClass)} style={{ zIndex: 50 - index }}>
+    <div className="relative flex flex-col items-center gap-3 sm:gap-4" style={{ zIndex: 50 - index }}>
       <button
         ref={cardRef}
         type="button"
