@@ -240,7 +240,7 @@ function SpreadPage() {
                 <button
                   type="button"
                   onClick={handleQuestionSubmit}
-                  className="magic-deal-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-oracle/50 bg-obsidian/60 text-oracle font-serif text-[16px] sm:text-[18px] tracking-[0.12em] uppercase transition-all duration-300 hover:border-oracle/80 hover:shadow-[0_0_20px_rgba(201,162,39,0.35),0_0_40px_rgba(201,162,39,0.15)] hover:scale-[1.02] active:scale-[0.98]"
+                  className="magic-deal-btn w-full inline-flex items-center justify-center gap-2 px-6 pt-[calc(0.875rem+2px)] pb-3.5 border-2 border-oracle/50 bg-obsidian/60 text-oracle font-serif text-[16px] sm:text-[18px] tracking-[0.12em] uppercase transition-all duration-300 hover:border-oracle/80 hover:shadow-[0_0_20px_rgba(201,162,39,0.35),0_0_40px_rgba(201,162,39,0.15)] hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Shuffle &amp; Deal
                 </button>
