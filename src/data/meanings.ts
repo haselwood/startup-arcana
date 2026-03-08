@@ -79,6 +79,7 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
     light: ['Coordination', 'Translation', 'Shielding the Team', 'Process'],
     dark: ['Bureaucracy', 'Bottleneck', 'Identity Crisis', 'Pointlessness'],
     description: "This card represents a complex duality. Some might view a middle manager as a useless layer, but often they are the ones who help grow talent and set people up for success. This card asks you to example what value system is around you. Should you be valuing the human element of a situation or focusing on delivering results? The answer will depend on what surrounds you.",
+  },
 
   'archetype-the-executive': {
     light: ['Vision', 'Strategic Thinking', 'Decision Making', 'Authority'],
