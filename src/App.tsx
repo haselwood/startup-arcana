@@ -236,13 +236,15 @@ function SpreadPage() {
                   className="w-full px-4 py-3 border border-whisper/40 bg-obsidian/70 text-white text-[16px] sm:text-[15px] font-mono placeholder:text-whisper/50 focus:outline-none focus:border-whisper/60 focus:bg-obsidian/90 transition-colors text-center resize-none"
                 />
               </div>
-              <button
-                type="button"
-                onClick={handleQuestionSubmit}
-                className="magic-deal-btn inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-oracle/50 bg-obsidian/60 text-oracle font-serif text-[16px] sm:text-[18px] tracking-[0.12em] uppercase transition-all duration-300 hover:border-oracle/80 hover:shadow-[0_0_20px_rgba(201,162,39,0.35),0_0_40px_rgba(201,162,39,0.15)] hover:scale-[1.02] active:scale-[0.98]"
-              >
-                Shuffle &amp; Deal
-              </button>
+              <div className="flex justify-center w-full">
+                <button
+                  type="button"
+                  onClick={handleQuestionSubmit}
+                  className="magic-deal-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-oracle/50 bg-obsidian/60 text-oracle font-serif text-[16px] sm:text-[18px] tracking-[0.12em] uppercase transition-all duration-300 hover:border-oracle/80 hover:shadow-[0_0_20px_rgba(201,162,39,0.35),0_0_40px_rgba(201,162,39,0.15)] hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  Shuffle &amp; Deal
+                </button>
+              </div>
             </div>
           </div>
         )}
