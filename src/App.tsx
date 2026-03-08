@@ -265,7 +265,7 @@ function SpreadPage() {
         {(phase === 'dealt' || phase === 'reading') && (
           <div className={cn(
             'flex flex-col items-center w-full max-w-[1200px]',
-            SPREAD_CONFIGS[spreadType].count === 3 && '-mt-[6px] sm:mt-0'
+            SPREAD_CONFIGS[spreadType].count === 3 && '-mt-[10px] sm:mt-0'
           )}>
             <div className={cn(
               'w-full pt-2 sm:pt-4',
