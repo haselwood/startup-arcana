@@ -12,97 +12,96 @@ export const CARD_MEANINGS: Record<string, CardMeaning> = {
   'archetype-junior': {
     light: ['Optimism', 'New Beginnings', 'Growth Mindset', 'Learning'],
     dark: ['Naivety', 'Ignorance', 'In Over Your Head', 'Paying Your Dues'],
-    description: "Ah, the wide-eyed newcomer who still believes the mission statement. They'll ask questions in all-hands that make VPs visibly sweat. Protect this energy — it has a half-life of about six months before the first reorg.",
+    description: "The Junior exudes potential and a bright future ahead. How can Junior energy show up for you? Where are you pushing yourself? What kind of advice would you give your younger self? The Junior reminds you that we are not always defined by who we are now, but who we are becoming.",
   },
 
   'archetype-the-besties': {
     light: ['Loyalty', 'Trust', 'Emotional Support', 'Shared Experience'],
-    dark: ['Codependency', 'Groupthink', 'Cliquishness', 'Tunnel Vision'],
-    description: "Two people who met during onboarding and now share a single brain cell, a Slack DM thread longer than the codebase, and an unspoken pact to quit on the same day. Their bond will outlast at least three CEOs.",
+    dark: ['Gossip', 'Groupthink', 'Cliquishness', 'Tunnel Vision'],
+    description: "The Besties often seem to be speaking their own secret language, possibly excluding others. While this card can represent deep connection and lifelong friendships, it can also represent the seeds of a toxic culture. What kind of social energy is around you? Do you join the pack or hold yourself apart?",
   },
 
   'archetype-the-recruiter': {
     light: ['Opportunity', 'Connection', 'New Doors', 'Market Awareness'],
     dark: ['Hollow Flattery', 'False Promises', 'Commodification', 'Spam'],
-    description: "They slid into your LinkedIn DMs calling you a 'rockstar' for a role that pays 40% less than your current gig. Their energy is relentless, their memory is short, and they will absolutely reach out again in six months as if you've never spoken.",
+    description: "Recuriters are gatekeepers of opportunity. They are the ones who can open doors for you, or close them. What might be blockling your path? What could help you open the door? Like a recruiter acting on the wishes of a hiring manager, what unseen rules are you navigating?",
   },
 
   'archetype-brilliant-jerk': {
     light: ['Raw Talent', 'Technical Mastery', 'High Standards', 'Fearlessness'],
     dark: ['Toxicity', 'Ego', 'Collateral Damage', 'Unsustainability'],
-    description: "Ten-x engineer, zero-x human being. They'll refactor your entire architecture on a Friday afternoon and mass-reply-all with 'per my last email' like it's a weapon. The board loves them. HR has a dedicated folder.",
+    description: "The Brilliant Jerk brings an adolescent arrogance to the table. Its important to remember that this figure is acting out their own internal demons, and that their behavior is not a reflection of your worth. What are the true motivations of those around you? Are you the one bringing your insecurities to the surface? What are you hiding?",
   },
 
   'archetype-side-hustler': {
     light: ['Entrepreneurship', 'Ambition', 'Resourcefulness', 'Independence'],
     dark: ['Divided Attention', 'Disloyalty', 'Burnout Risk', 'Conflict of Interest'],
-    description: "By day, they push tickets. By night, they're building a competitor in a different vertical using company WiFi. Their 'quick call' is always about their Shopify store. One foot out the door, but somehow still hitting sprint goals.",
+    description: "On the surface, the Side Hustler is a go-getter, but beneath the surface, they are a victim of their own ambition. What are you sacrificing to chase your dreams? What are you trading for the potential of a better future? The Side Hustler reminds you that burning the candle at both ends can come at a cost. At the same time, theres potential for growth and success.",
   },
 
   'archetype-powerhungry-fool': {
     light: ['Ambition', 'Visibility', 'Initiative', 'Confidence'],
     dark: ['Delusion', 'Overreach', 'Political Games', 'Empty Authority'],
-    description: "They've been promoted exactly once for being loud in a meeting and have been chasing that high ever since. Their calendar is 90% 'strategy sessions' they organized themselves. They will CC the CEO on a thread about office snacks.",
+    description: "The powerhungry fool is performing in the theater of the workplace. Their blatant self-interest can come off as disingenuous, but its important to remember that they are not acting out of malice, but out of a desire to be seen and heard. What are you doing to get noticed? Are you playing the game, or are you just getting played?",
   },
 
   'archetype-mentor': {
     light: ['Wisdom', 'Generosity', 'Patience', 'Investment in Others'],
     dark: ['Overextension', 'Savior Complex', 'Living Vicariously', 'Neglecting Self'],
-    description: "The rare soul who actually reads your PR comments, buys you coffee when you're struggling, and tells you the truth about the promotion timeline. They've seen four rounds of layoffs and still believe people are worth investing in. Cherish them.",
+    description: "The mentor brings a rare nuturing energy to the Startup Arcana. They root for your success and genuinely want to help you grow. Beware though, as a mentor may not always lead you down the right path. If you are bringing the mentor energy, you must make sure it doesn't come at the expense of your own growth. How do you need to be nurtureed? What around you is asking for your help?",
   },
 
   'archetype-the-og': {
     light: ['Institutional Knowledge', 'Resilience', 'Founder Energy', 'Credibility'],
     dark: ['Entitlement', 'Resistance to Change', 'Nostalgia Trap', 'Diluted Equity'],
-    description: "They joined before there were desks. They remember when the 'database' was a Google Sheet and the 'office' was a Panera Bread. They own 0.3% of the company and will never let you forget it, even though the last two funding rounds diluted it into a rounding error.",
+    description: "The OG employee has seen it all, from the Founder's public breakdown to the 8th round of layoffs. They know where the bodies are buried, and are a less obvious source of power, often whispering in the ears of the new CEO. Where is the real power coming from in the room? What is the value of institutional knowledge? How can you leverage your knowledge to your advantage?",
   },
 
   'archetype-9-9-6-grinder': {
     light: ['Dedication', 'Work Ethic', 'Reliability', 'Discipline'],
     dark: ['Self-Destruction', 'Martyrdom', 'Lost Identity', 'Toxic Hustle'],
-    description: "9am to 9pm, 6 days a week, and they will absolutely tell you about it. Their Slack status is permanently set to 'heads down' and they haven't used PTO since the Obama administration. The work is their personality now. It's too late.",
+    description: "Theres always going to be someone who works more hours than you. This card asks you to example if this is the right approach for this situation, and it very well may be. Do you plow forward with full steam ahead, or is this card a warning of what might happen if you do?",
   },
 
   'archetype-martyr': {
     light: ['Selflessness', 'Going Above and Beyond', 'Team Player', 'Sacrifice'],
     dark: ['Resentment', 'Self-Inflicted Pain', 'Manipulation', 'Boundary Collapse'],
-    description: "They volunteered for every on-call shift, rewrote the entire test suite over a weekend nobody asked them to, and now they're burned out and resentful. Their suffering is both self-inflicted and somehow everyone else's fault.",
+    description: "This person is using a victim complex as a manipulation tactic. You feel compelled to help them, but in doing so, you are enabling their behavior. How can you help them without enabling them? What is the real problem they are trying to solve? What is not being said?",
   },
 
   'archetype-quiet-quitter': {
     light: ['Boundaries', 'Self-Preservation', 'Work-Life Balance', 'Clarity'],
     dark: ['Disengagement', 'Apathy', 'Coasting', 'Checked Out'],
-    description: "They log on at 9:01, log off at 4:59, and have achieved a zen-like state of doing exactly what their job description says and nothing more. Their boundaries are immaculate. Leadership calls it 'disengagement.' They call it 'the job.'",
+    description: "Is the Quiet Quitter the one who is going to get let go first, or the one who is playing the game correctly? Doing the minimum while staying unnoticed for good or bad is an art. How much effort does this situation really require of you? Can you get away with doing less? Is being conservative with your engery costing you an opportunity?",
   },
 
   'archetype-middle-manager': {
     light: ['Coordination', 'Translation', 'Shielding the Team', 'Process'],
     dark: ['Bureaucracy', 'Bottleneck', 'Identity Crisis', 'Pointlessness'],
-    description: "A human routing layer between the people who do the work and the people who take credit for it. Their superpower is scheduling meetings about meetings. They haven't written code in three years but their title still says 'engineering.'",
-  },
+    description: "This card represents a complex duality. Some might view a middle manager as a useless layer, but often they are the ones who help grow talent and set people up for success. This card asks you to example what value system is around you. Should you be valuing the human element of a situation or focusing on delivering results? The answer will depend on what surrounds you.",
 
   'archetype-the-executive': {
     light: ['Vision', 'Strategic Thinking', 'Decision Making', 'Authority'],
     dark: ['Detachment', 'Jargon Addiction', 'Calendar Tyranny', 'Whiplash'],
-    description: "They speak exclusively in frameworks, never use one word when a McKinsey acronym will do, and believe deeply that 'alignment' is a deliverable. Their calendar is a war crime. They will pivot your roadmap during a bathroom break.",
+    description: "The executive represents authority and material success, but remember it can be lonely at the top. This card can reprent power but it can also represent the cost that comes with it. How are you bearing the weight of responsibility? Are you getting the external validation you need? Are you able to let go of control and trust the people around you?",
   },
 
   'archetype-visionary': {
     light: ['Imagination', 'Big Picture Thinking', 'Inspiration', 'Possibility'],
-    dark: ['Impracticality', 'Idea Hoarding', 'Execution Gap', 'Short Attention Span'],
-    description: "They see the future with terrifying clarity and absolutely zero ability to execute on it. Every conversation is a TED talk. They'll pitch a 'paradigm shift' over lunch and forget about it by dinner because they've already had three more ideas.",
+    dark: ['Impracticality', 'Overpromising', 'Missing the trees for the forest'],
+    description: "There has to be a visionary on every team, but a team of visionaries is a recipe for disaster. Dream big, but make sure you know when you need to back it up with a plan. Enlist the right people to help you execute. How does big picture thinking help or hinder this situation? What is needed to make your ideas a reality?",
   },
 
   'archetype-thought-leader': {
     light: ['Influence', 'Platform', 'Brand Building', 'Thought Provocation'],
-    dark: ['Performance Over Substance', 'Ego', 'Grift', 'Hot Air'],
-    description: "They've escaped into pure performance — keynotes, LinkedIn threads, podcast guest spots, and 'frameworks' that are just common sense with a graphic. Their deliverables are vibes. Their KPIs are impressions. They are a TED Talk that gained sentience and learned to bill hourly.",
+    dark: ['Performance Over Substance', 'Ego', 'Grift'],
+    description: "The thought leader has a personal brand to protect, and they will do whatever it takes to maintain it. This card can represent a powerful force for good, but it can also represent a dangerous ego trip. How are you using your platform to help or hinder this situation? What is the true value of your ideas? Are you being genuine, or are you just playing the game?",
   },
 
   'archetype-digital-nomad': {
     light: ['Freedom', 'Adaptability', 'Adventure', 'Autonomy'],
     dark: ['Unreliability', 'Time Zone Chaos', 'Disconnection', 'Privilege'],
-    description: "Currently attending standup from a hammock in Bali with 200ms latency and zero shame. Their Zoom background is suspicious. Their work hours are 'flexible' in the way that tectonic plates are flexible. They will miss every deadline and post a sunset.",
+    description: "The digital nomad has their cake and eats it too. Attending a meeting from a cafe in Mexico City sounds romantic but can also represent a split heart. What might you be running away from? Are you unable to decouple work and play? It could also be a sign to take advantage of the privileges you have.",
   },
 
   // ══════════════════════════════════════
