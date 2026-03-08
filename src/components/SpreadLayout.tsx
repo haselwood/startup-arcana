@@ -6,7 +6,7 @@ import type { DealtCard, SpreadType } from '@/types'
 const MOBILE_SIZES: Record<number, { w: string; h: string; maxW: string }> = {
   1: { w: 'w-[200px]', h: 'h-[333px]', maxW: 'max-w-[200px]' },
   2: { w: 'w-[155px]', h: 'h-[258px]', maxW: 'max-w-[155px]' },
-  3: { w: 'w-[130px]', h: 'h-[217px]', maxW: 'max-w-[130px]' },
+  3: { w: 'w-[155px]', h: 'h-[258px]', maxW: 'max-w-[155px]' },
 }
 
 interface SpreadLayoutProps {

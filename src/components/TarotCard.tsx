@@ -6,13 +6,13 @@ import type { DealtCard } from '@/types'
 const MOBILE_CARD_SIZES: Record<number, string> = {
   1: 'w-[200px] h-[333px]',
   2: 'w-[155px] h-[258px]',
-  3: 'w-[130px] h-[217px]',
+  3: 'w-[155px] h-[258px]',
 }
 
 const MOBILE_LABEL_SIZES: Record<number, string> = {
   1: 'max-w-[200px]',
   2: 'max-w-[155px]',
-  3: 'max-w-[130px]',
+  3: 'max-w-[155px]',
 }
 
 interface TarotCardProps {

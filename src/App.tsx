@@ -184,7 +184,7 @@ function SpreadPage() {
   }, [question, spreadType, startTypewriter])
 
   useEffect(() => {
-    if (phase === 'dealt' || phase === 'reading') {
+    if (phase === 'dealt') {
       window.scrollTo(0, 0)
     }
   }, [phase])
@@ -197,6 +197,12 @@ function SpreadPage() {
       fetchReading(dealtCards)
     }
   }, [phase, dealtCards, fetchReading])
+
+  useEffect(() => {
+    if (phase === 'reading' && readingRef.current) {
+      readingRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [phase])
 
   useEffect(() => {
     if (readingText && readingRef.current) {
