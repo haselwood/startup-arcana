@@ -59,7 +59,7 @@ export function TarotCard({ dealt, onFlip, onLightbox, index, deckRef, totalCard
   }
 
   return (
-    <div className="relative flex flex-col items-center gap-3 sm:gap-4" style={{ zIndex: 50 - index }}>
+    <div className="relative flex flex-col items-center gap-[10px] sm:gap-4" style={{ zIndex: 50 - index }}>
       <button
         ref={cardRef}
         type="button"

@@ -9,6 +9,7 @@ import { ActionButton } from '@/components/ActionButton'
 import { HomeBg } from '@/components/HomeBg'
 import { PixelMoth } from '@/components/PixelMoth'
 import { OraclePage } from '@/components/OraclePage'
+import { cn } from '@/lib/utils'
 import { shuffleDeck, SPREAD_CONFIGS } from '@/data/cards'
 import { CARD_MEANINGS } from '@/data/meanings'
 import type { SpreadType, DealtCard, TarotCard } from '@/types'
@@ -263,7 +264,10 @@ function SpreadPage() {
 
         {(phase === 'dealt' || phase === 'reading') && (
           <div className="flex flex-col items-center w-full max-w-[1200px]">
-            <div className="w-full mb-4 sm:mb-8 pt-2 sm:pt-4">
+            <div className={cn(
+              'w-full pt-2 sm:pt-4',
+              SPREAD_CONFIGS[spreadType].count === 3 ? 'mb-1 sm:mb-8' : 'mb-4 sm:mb-8'
+            )}>
               <div className="flex justify-between items-center gap-2 mb-4 sm:mb-6">
                 <ActionButton onClick={() => navigate('/')} className="flex-1 sm:flex-none">
                   &larr; New Spread
