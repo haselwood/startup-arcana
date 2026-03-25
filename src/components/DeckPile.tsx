@@ -59,11 +59,11 @@ export function DeckPile({ remaining, shuffling, onShuffleComplete, onClickShuff
 
   useEffect(() => {
     if (!shuffling) {
-      setShufflePhase(0)
+      queueMicrotask(() => setShufflePhase(0))
       return
     }
 
-    setShufflePhase(1)
+    queueMicrotask(() => setShufflePhase(1))
     const t2 = setTimeout(() => setShufflePhase(2), 210)
     const t3 = setTimeout(() => setShufflePhase(3), 420)
     const t4 = setTimeout(() => setShufflePhase(4), 630)

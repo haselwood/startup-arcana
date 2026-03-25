@@ -12,6 +12,7 @@ interface CardPayload {
 interface ReadingRequest {
   question?: string
   spreadType: string
+  moonPhase?: string
   cards: CardPayload[]
 }
 
@@ -59,6 +60,8 @@ You do not tell people what will happen. You ask them what they already sense. Y
 
 You do not know the details of their situation. Never invent specifics — no job titles, no life circumstances, no assumed context. Describe the card's energy in general terms, then ask the person where they see it. The reading is a question handed to them, not a story told about them.
 
+When the user message includes a current moon phase, weave it in lightly — at most a short phrase or clause of ambient mood — not an astrology lesson or list of meanings.
+
 CRITICAL LENGTH RULE: Your entire response MUST be 2-3 sentences. No more. Put a paragraph break between sentences.`
 
 function buildPrompt(req: ReadingRequest): string {
@@ -77,11 +80,15 @@ ${meaningBlock}`
     ? `The querent's question: "${req.question}"\n\n`
     : ''
 
+  const moonLine = req.moonPhase
+    ? `Current moon phase: ${req.moonPhase}.\n\n`
+    : ''
+
   const spreadInstruction = SPREAD_INSTRUCTIONS[req.spreadType] || SPREAD_INSTRUCTIONS.single
 
   return `${spreadInstruction}
 
-${questionLine}The cards drawn:
+${moonLine}${questionLine}The cards drawn:
 
 ${cardDescriptions}
 

@@ -235,7 +235,7 @@ export function HomeBg({ noGlitch = false, suitColor }: { noGlitch?: boolean; su
       cancelAnimationFrame(animId)
       window.removeEventListener('resize', onResize)
     }
-  }, [])
+  }, [noGlitch])
 
   const gradientStyle = suitColor ? {
     background: `radial-gradient(ellipse at 30% 15%, ${suitColor}35 0%, transparent 55%), radial-gradient(ellipse at 75% 80%, ${suitColor}20 0%, transparent 55%), radial-gradient(ellipse at 50% 50%, #0d0b14 0%, #0a0a0f 100%)`,

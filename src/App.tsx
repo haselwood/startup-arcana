@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from 'react'
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react'
 import { Routes, Route, Navigate, useNavigate, useParams, useLocation, Link } from 'react-router-dom'
 import { SpreadSelector } from '@/components/SpreadSelector'
 import { ShuffleAnimation } from '@/components/ShuffleAnimation'
@@ -10,6 +10,7 @@ import { HomeBg } from '@/components/HomeBg'
 import { PixelMoth } from '@/components/PixelMoth'
 import { OraclePage } from '@/components/OraclePage'
 import { cn } from '@/lib/utils'
+import { getMoonPhaseDisplay, getMoonPhaseLabel } from '@/lib/moonPhase'
 import { shuffleDeck, SPREAD_CONFIGS } from '@/data/cards'
 import { CARD_MEANINGS } from '@/data/meanings'
 import type { SpreadType, DealtCard, TarotCard } from '@/types'
@@ -75,6 +76,11 @@ function SpreadPage() {
   const textBufferRef = useRef('')
   const displayedLenRef = useRef(0)
   const typewriterRef = useRef<number | null>(null)
+
+  const moonDisplay = useMemo(() => {
+    if (phase !== 'dealt' && phase !== 'reading') return null
+    return getMoonPhaseDisplay()
+  }, [phase])
 
   const handleQuestionSubmit = useCallback(() => {
     setPhase('shuffling')
@@ -144,6 +150,7 @@ function SpreadPage() {
       const payload = {
         question: question || undefined,
         spreadType,
+        moonPhase: getMoonPhaseLabel(),
         cards: cards.map(d => ({
           name: d.card.name,
           suit: d.card.suit,
@@ -296,6 +303,18 @@ function SpreadPage() {
                 deckRef={deckRef}
               />
             </div>
+
+            {moonDisplay ? (
+              <p
+                className="mt-2 text-[13px] sm:text-[14px] font-mono text-white text-center tracking-wide"
+                aria-live="polite"
+              >
+                <span className="mr-1.5" aria-hidden>
+                  {moonDisplay.emoji}
+                </span>
+                {moonDisplay.label} {moonDisplay.percent}%
+              </p>
+            ) : null}
 
             {question ? (
               <div className="w-full flex justify-center mt-8 mb-2 px-4">
